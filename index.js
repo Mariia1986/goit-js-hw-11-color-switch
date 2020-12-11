@@ -20,7 +20,7 @@ const colors = [
   let colorGen=null;
 
   function changeColor() {
-      refs.body.style.backgroundColor=colors[randomIntegerFromInterval(0,5)];
+      refs.body.style.backgroundColor=colors[randomIntegerFromInterval(0,colors.length)];
   }
   refs.start.addEventListener('click',(event)=>{ colorGen=setInterval(changeColor,1000)
     event.target.disabled = true;
